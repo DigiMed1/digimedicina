@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digimed - information request</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .container {
+    max-width: 800px;
+    padding: 20px;
+  }
+  .form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  input[type="submit"] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+</style>
+</head>
+<body>
+
+<img src="./img/Digimedlogo.jpeg" alt="Logo Digimed">
+
+<div class="container">
+  <h1>Welcome to DigiMed</h1>
+  <p>We care about your health. Fill out the form below to request more information.</p>
+  
+  <div class="form-container">
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DQy000004oUWs" method="POST">
+      <input type="hidden" name="oid" value="00DQy000004oUWs">
+      <input type="hidden" name="retURL" value="http://google.com">
+
+      <label for="first_name">First name</label>
+      <input id="first_name" maxlength="40" name="first_name" size="20" type="text" required><br>
+
+      <label for="last_name">Last name</label>
+      <input id="last_name" maxlength="80" name="last_name" size="20" type="text" required><br>
+
+      <label for="email">Email</label>
+      <input id="email" maxlength="80" name="email" size="20" type="email" required><br>
+
+      <label for="phone">Phone</label>
+      <input id="phone" maxlength="40" name="phone" size="20" type="tel" required><br>
+
+      <label for="company">Company</label>
+      <input id="company" maxlength="40" name="company" size="20" type="text" required><br>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
